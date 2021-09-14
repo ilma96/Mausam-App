@@ -1,5 +1,5 @@
 body {
-  background-image: url("src/images/weather.jpg");
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/357/873/247/water-rain-umbrella-leaves-wallpaper-preview.jpg");
   background-size: 60%;
   max-width: 90%;
 }
@@ -96,14 +96,6 @@ li {
   top: -34px;
 }
 
-.weather-icon .active {
-  color: #191e26;
-  cursor: default;
-}
-
-.weather-icon .active:hover {
-  text-decoration: none;
-}
 .stylize {
   font-size: 18px;
   position: relative;
