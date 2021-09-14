@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Mausam Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <form class="mb3" id="search-form">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Type a city.."
+                autofocus="on"
+                autocomplete="off"
+                class="form-control shadow-sm"
+                id="city-selection"
+                ;
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="container diamond-shape">
+      <h1 id="modify-city"></h1>
+    </div>
+    <div class="container">
+      <div class="weather-app-wrapper">
+        <ul>
+          <li>Last updated: <span id="day-time"></span></li>
+          <li id="weather-state"></li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix weather-icon">
+              <img src="#" alt="Clear" id="icon" class="float-left" />
+              <div class="float-left">
+                <strong id="temperature">27</strong
+                ><span class="units"
+                  ><a href="#" id="celsius-link" class="active">°C</a>|<a
+                    href="#"
+                    id="fahrenheit-link"
+                    class="unit-fahrenheit"
+                    >°F</a
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
+            </ul>
+          </div>
+        </div>
+        <div class="weather-forecast" id="forecast-ID">
+          <div class="row">
+            <div class="col-2">
+              <div class="weather-forcast-date">Tue</div>
+              <img
+                src="http://openweathermap.org/img/wn/50d@2x.png"
+                alt=""
+                width="44"
+              />
+              <div class="weather-temp-max">83° high</div>
+              <div class="weather-temp-min">66° low</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <small class="stylize">
+        <a href="#" target="_blank">Open-source code</a>
+        by Ilma Shaharin.
+        <span class="position"
+          >Connect with me on<a href="#" target="_blank"> LinkedIn.</a></span
+        >
+      </small>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>

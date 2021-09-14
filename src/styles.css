@@ -1,0 +1,129 @@
+body {
+  background-image: url("src/images/weather.jpg");
+  background-size: 60%;
+  max-width: 90%;
+}
+h1 {
+  color: #1c2e21;
+  transform: rotate(-45deg);
+  vertical-align: middle;
+  display: table-cell;
+  height: 150px;
+  width: 110px;
+  font-size: 31px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  color: #1c2e21;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 24px;
+}
+.weather-app {
+  padding: 10px;
+  border: 1px solid #dadde1;
+  border-radius: 20px;
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  max-width: 45%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 250px;
+  left: 70px;
+}
+.row .shadow-sm {
+  background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+  border-color: #ffffff;
+  border-radius: 10px;
+  color: #35302f;
+  transition: all 200ms ease;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+}
+.row .shadow-sm:hover {
+  color: #5e4844;
+  cursor: pointer;
+  font-size: 17px;
+  border-color: #ffffff;
+}
+.diamond-shape {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(128, 248, 174) 0%,
+    rgb(223, 244, 148) 90%
+  );
+  height: 150px;
+  text-align: center;
+  transform: rotate(45deg);
+  width: 150px;
+}
+.weather-app-wrapper {
+  max-width: 550px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  top: 100px;
+  border: 1px solid #dadde1;
+  border-radius: 36px;
+  background: radial-gradient(
+    circle at 0.7% 1%,
+    rgb(215, 248, 247) 0%,
+    rgb(102, 188, 239) 100.2%
+  );
+  text-transform: capitalize;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.weather-icon img {
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+}
+
+.weather-icon strong {
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.weather-icon .units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+}
+
+.weather-icon .active {
+  color: #191e26;
+  cursor: default;
+}
+
+.weather-icon .active:hover {
+  text-decoration: none;
+}
+.stylize {
+  font-size: 18px;
+  position: relative;
+  top: 90px;
+  left: 70px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.position {
+  position: relative;
+  left: 550px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #1c2e21;
+  font-size: 22px;
+}
+.weather-temp-max,
+.weather-temp-min {
+  opacity: 0.6;
+  font-size: 16px;
+}
