@@ -75,9 +75,8 @@ function showTemperature(response) {
   let windBox = document.querySelector("#wind");
   let dateBox = document.querySelector("#day-time");
   let iconBox = document.querySelector("#icon");
-  tempInCelsius = response.data.main.temp;
-
-  temperatureBox.innerHTML = Math.round(tempInCelsius);
+  tempInFahrenheit = response.data.main.temp;
+  temperatureBox.innerHTML = Math.round(tempInFahrenheit);
   cityBox.innerHTML = response.data.name;
   descriptionBox.innerHTML = response.data.weather[0].description;
   humidityBox.innerHTML = response.data.main.humidity;
@@ -92,7 +91,7 @@ function showTemperature(response) {
 }
 function search(city) {
   let apiKey = "b6d0f48d8b8d9ccceaeb0e9770f0b375";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(showTemperature);
 }
 
@@ -101,34 +100,8 @@ function submitHandler(event) {
   let cityInputElement = document.querySelector("#city-selection");
   search(cityInputElement.value);
 }
-
-function displayTempInFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let tempInFahrenheit = (tempInCelsius * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(tempInFahrenheit);
-}
-
-function displayTempInCelsius(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(tempInCelsius);
-}
-function showForecast(response) {
-  forecastElement.innerHTML = dpcument.querySelector("#forecast-ID");
-}
-let tempInCelsius = null;
-
+let tempInFahrenheit = null;
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", submitHandler);
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayTempInFahrenheit);
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayTempInCelsius);
 
 search("San Francisco");
