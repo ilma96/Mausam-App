@@ -1,7 +1,5 @@
 body {
   background-image: url("https://c4.wallpaperflare.com/wallpaper/357/873/247/water-rain-umbrella-leaves-wallpaper-preview.jpg");
-  background-size: 650px;
-  max-width: 100%;
 }
 h1 {
   color: #1c2e21;
@@ -105,8 +103,11 @@ li {
 }
 .position {
   position: relative;
-  left: 350px;
+  left: 300px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 20px;
+  margin: 25px auto;
+  border: 1px solid #dadde13d;
 }
 .weather-forecast {
   margin-top: 20px;

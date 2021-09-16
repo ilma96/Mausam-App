@@ -84,7 +84,7 @@ function showTemperature(response) {
   dateBox.innerHTML = dateFormatter(response.data.dt * 1000);
   iconBox.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconBox.setAttribute("alt", response.data.weather[0].description);
   getForecast(response.data.coord);
