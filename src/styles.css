@@ -103,11 +103,8 @@ li {
 }
 .position {
   position: relative;
-  left: 300px;
+  left: 500px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  padding: 20px;
-  margin: 25px auto;
-  border: 1px solid #dadde13d;
 }
 .weather-forecast {
   margin-top: 20px;
