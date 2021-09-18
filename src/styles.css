@@ -1,5 +1,10 @@
 body {
-  background-image: url("https://c4.wallpaperflare.com/wallpaper/357/873/247/water-rain-umbrella-leaves-wallpaper-preview.jpg");
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(254, 255, 165) 0%,
+    rgb(255, 232, 182) 90%
+  );
+  max-width: 100%;
 }
 h1 {
   color: #1c2e21;
@@ -22,11 +27,17 @@ li {
   font-weight: 100;
   line-height: 24px;
 }
+
+.icon {
+  position: fixed;
+  left: 0px;
+}
 .weather-app {
-  padding: 10px;
-  border: 1px solid #dadde1;
-  border-radius: 20px;
-  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(254, 255, 165) 0%,
+    rgb(255, 232, 182) 90%
+  );
   max-width: 45%;
   display: block;
   margin: 0 auto;
@@ -66,11 +77,11 @@ li {
   position: relative;
   top: 100px;
   border: 1px solid #dadde1;
-  border-radius: 36px;
+  border-radius: 50px;
   background: radial-gradient(
-    circle at 0.7% 1%,
-    rgb(215, 248, 247) 0%,
-    rgb(102, 188, 239) 100.2%
+    circle at 3% 4.8%,
+    rgb(169, 224, 127) 0%,
+    rgb(248, 247, 121) 86.6%
   );
   text-transform: capitalize;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -97,18 +108,11 @@ li {
 .stylize {
   font-size: 18px;
   position: relative;
-  top: 90px;
-  left: 70px;
+  top: 84px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  left: 150px;
 }
-.position {
-  position: relative;
-  left: 300px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  padding: 20px;
-  margin: 25px auto;
-  border: 1px solid #dadde13d;
-}
+
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
