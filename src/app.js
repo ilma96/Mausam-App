@@ -20,6 +20,8 @@ function dateFormatter(time) {
   let theDay = days[date.getDay()];
   return `${theDay} ${hours}:${minutes}`;
 }
+
+
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -27,6 +29,8 @@ function formatDay(timestamp) {
 
   return days[day];
 }
+
+
 function displayForecast(response) {
   let forecast = response.data.daily;
 
@@ -61,12 +65,16 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+
+
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "b6d0f48d8b8d9ccceaeb0e9770f0b375";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayForecast);
 }
+
+
 function showTemperature(response) {
   let temperatureBox = document.querySelector("#temperature");
   let cityBox = document.querySelector("#modify-city");
@@ -89,19 +97,26 @@ function showTemperature(response) {
   iconBox.setAttribute("alt", response.data.weather[0].description);
   getForecast(response.data.coord);
 }
+
+
 function search(city) {
   let apiKey = "b6d0f48d8b8d9ccceaeb0e9770f0b375";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(showTemperature);
 }
 
+
+
 function submitHandler(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-selection");
   search(cityInputElement.value);
 }
+
+
 let tempInFahrenheit = null;
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", submitHandler);
+
 
 search("San Francisco");
